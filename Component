@@ -1,0 +1,31 @@
+public class Component {
+	
+	@FindBy(xpath="//span[@title='Component Reference']") 
+	WebElement componentreference;
+
+	@FindBy(xpath="//input[@id='input-14']")
+	WebElement quickfind;
+
+	@FindBy(xpath="(//span[@title='datatable'])[2]")
+	private WebElement datatable;
+
+	@FindBy(xpath="((//div//button[@class='slds-button slds-button_neutral'])[1]")
+	private WebElement viewlighting;
+
+	public Component(WebDriver driver)
+	{
+		
+		PageFactory.initElements(driver, this);
+	}
+		
+		public void config()
+		{
+			
+			componentreference.click();
+			quickfind.sendKeys("datatable");
+			quickfind.click();
+			viewlighting.click();
+				
+		}
+
+}
