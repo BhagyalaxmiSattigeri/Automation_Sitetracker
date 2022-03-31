@@ -1,0 +1,21 @@
+public class BaseClass {
+	
+		public WebDriver driver;
+
+		@BeforeMethod
+		public void preCondition()
+		{
+			
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\Bhagyalaxmi.s\\chromedriver_win32.exe");
+			
+			driver=new ChromeDriver();
+			driver.get("https://developer.salesforce.com/docs/component-library/documentation/en/48.0/lwc");
+			
+		}
+		 @AfterMethod
+		 public void postCondition()
+		{
+		driver.close();
+		}
+
+}
