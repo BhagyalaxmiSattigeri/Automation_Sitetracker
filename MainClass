@@ -1,0 +1,23 @@
+public class Main extends BaseClass {
+	
+
+	@Test
+	public void configRun() 
+	{
+		
+		Component c=new Component(driver);	
+		c.config();
+		List<WebElement> all_elements=driver.findElements(By.xpath("(//div[@class=\"slds-form-element__control\"])[1]"));
+	
+	       for(WebElement e : all_elements) 
+	       {
+	         if(e.getText().equalsIgnoreCase("Data Table with Inline Edit")) {
+	             e.click();
+	         }
+		driver.findElements(By.xpath("(//button[@type=\"button\" and @class=\"slds-button slds-button_neutral\"])[3]"));
+	
+	}
+	
+
+}
+}
